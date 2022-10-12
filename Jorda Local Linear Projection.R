@@ -7,7 +7,7 @@ library(zoo)
 library(gridExtra)
 library(ggpubr)
 
-setwd("D:/Kuliah/Master/Research Seminar/Data Nederland")
+setwd("") # Working directory
 jorda.raw <- read_excel("r_data.xlsx", sheet = "seasonally adjusted")
 jorda.growth <- read_excel("r_data.xlsx", sheet = "growth")
 
@@ -294,8 +294,6 @@ ggplot(responses, aes(x = period, y = mean, group=group, col=group, fill=group))
 ggplot(part1, aes(x = period, y = mean, group=group, col=group, fill=group)) +
   geom_ribbon(aes(ymin = lower, ymax = upper), linetype = 2, alpha = 0.2) +
   geom_line()
-
-
 
 
 # Make and save nonlinear plots
